@@ -13,7 +13,21 @@ const cx=classNames.bind(styles)
 const MENU_ITEMS=[
   {
   icon:<FontAwesomeIcon icon={faEarthEurope}/>,
-  title:'English'
+  title:'English',
+  children:{
+    title:'Language',
+    data:[
+      {
+        code:'en',
+        title:'English'
+        
+      },
+      {
+        code:'vi',
+        title:'Tieng Viet'
+      },
+    ],
+  }
   },
   {
     icon:<FontAwesomeIcon icon={faCircleQuestion}/>,
@@ -38,7 +52,7 @@ function Header( ) {
              <img src={images.logo} alt='Tiktok' />
              <Tippy 
               interactive
-               visible={searchResult.length > 0}
+              //  visible={searchResult.length > 0}
                render={(attrs) => (
                  <div className={cx('search-result')} tabIndex='-1' {...attrs}>
                    <PopperWrapper>
@@ -74,7 +88,7 @@ function Header( ) {
           <Button primary >
             Login 
           </Button>
-               <Menu items={MENU_ITEMS}>
+               <Menu items={MENU_ITEMS} onChange={(menuInfo)=>console.log(menuInfo)}>
                <button className={cx('more-btn')}>
          <FontAwesomeIcon icon={faEllipsisVertical}/>
                </button>

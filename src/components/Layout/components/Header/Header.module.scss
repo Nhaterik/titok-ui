@@ -13,6 +13,7 @@
 .inner{
     height: 100%;
     width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,6 +84,7 @@ border-bottom-right-radius: var(--search-border-radius);
 }
 .more-btn{
   font-size: 2rem;
-  margin-left: 28px;
+  padding-left: 28px;
+  cursor: pointer;
   background-color: transparent;
 }
