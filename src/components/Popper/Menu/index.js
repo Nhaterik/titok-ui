@@ -19,11 +19,11 @@ function Menu({children,items=[],onChange}) {
              data={item}
              onClick={()=>{
                 if(isParent) {
-                    console.log(item.children)
                     setHistory(pre=> ([...pre,item.children]))
                 }
                 else onChange(item)
-             }}
+             }
+            }
              />
     })
     }
@@ -31,6 +31,7 @@ function Menu({children,items=[],onChange}) {
     return (
         <Tippy 
         interactive
+        offset={[6,8]}
         delay={[0,600]}
         placement='bottom-end'
          render={(attrs) => (
@@ -42,6 +43,7 @@ function Menu({children,items=[],onChange}) {
            </div>
 
          )}
+         onHide={()=>setHistory((pre)=>pre.slice(0,1))}
         >
       {children}    
         </Tippy>
