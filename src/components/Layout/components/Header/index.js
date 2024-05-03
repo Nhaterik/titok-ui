@@ -16,10 +16,7 @@ import {
     faEarthEurope,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
-    faMessage,
     faUser,
-    faIcons,
     faGear,
     faCoins,
 } from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +24,8 @@ import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
@@ -123,7 +122,7 @@ function Header() {
                     {currentUser ? (
                         <Tippy trigger='click' content="Upload video" placement='bottom'>
                             <button  className={cx('action-btn')}>
-                                <FontAwesomeIcon icon={faCloudUpload} />
+                                <UploadIcon/>
                             </button>
                         </Tippy>
                     ) : (
@@ -134,10 +133,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={(menuInfo) => console.log(menuInfo)}>
                         {currentUser ? (
-                            <img
-                              className={cx('user-avatar')}
-                                src="https://i.scdn.co/image/ab676161000051747afc6ecdb9102abd1e10d338"
+                            <Image
+                                className={cx('user-avatar')}
+                                src="https://i.scdn.co/image/ab676161000051747afc6ecdb9102abd1e10d338thisiswrong"
                                 alt="Pham Van Nhat"
+                                Replace="https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
