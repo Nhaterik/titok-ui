@@ -74,7 +74,7 @@ border-top-right-radius:var(--search-border-radius) ;
 border-bottom-right-radius: var(--search-border-radius);
  width: var(--search-btn-width);
  height: 100%;
- font-size: 1.8rem;
+ font-size: 1.8rem; 
  color: rgba(22,24,35,0.3);
 
  &:hover{
@@ -99,6 +99,20 @@ border-bottom-right-radius: var(--search-border-radius);
   padding-left: 28px;
   cursor: pointer;
   background-color: transparent;
+}
+.badge {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  padding: 0px 6px;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: 'ProximaNova', sans-serif;
+  background-color: var(--primary);
 }
 .user-avatar{
   width: 32px;
