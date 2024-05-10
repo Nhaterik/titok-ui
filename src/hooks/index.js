@@ -1,0 +1,1 @@
+export {default as useDeBound} from './useDebounce.js'
