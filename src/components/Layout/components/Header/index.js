@@ -14,6 +14,8 @@ import {
     faGear,
     faCoins,
 } from '@fortawesome/free-solid-svg-icons';
+import routesConfig from '~/config/routes'
+import {Link} from 'react-router-dom'
 import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
@@ -78,7 +80,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home}  className={cx('logo-link')}><img src={images.logo} alt="Tiktok" /></Link>
                <Search/>
                 <div className={cx('actions')}>
                     {currentUser ? (
