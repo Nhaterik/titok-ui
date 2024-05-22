@@ -5,6 +5,10 @@
     --search-btn-width:52px;
     width: 100%;
     height: var(--default-layout-header-height,60px);
+    position: fixed;
+    top: 0;
+    background-color: var(--white);
+    left: 0;
     box-shadow:0 1px 1px rgb(0 0 0 / 12%) ;
     display: flex;
     justify-content: center;

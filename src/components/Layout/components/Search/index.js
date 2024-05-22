@@ -41,7 +41,9 @@ const handleChange=(e) => {
 }
 
     return (
-        <HeadelessTip
+      <div>
+        {/* solve tippy error by adding div */}
+          <HeadelessTip
             interactive
             visible={showResult && searchResult.length > 0}
             render={(attrs) => (
@@ -86,6 +88,7 @@ const handleChange=(e) => {
                 </button>
             </div>
         </HeadelessTip>
+      </div>
     );
 }
 
